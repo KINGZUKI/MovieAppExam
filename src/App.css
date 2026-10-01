@@ -1,0 +1,129 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #1a0a3b;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 32px 24px;
+}
+ 
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+ 
+.app h1 {
+  font-size: 2rem;
+  color: #EF9C00;
+  margin-bottom: 24px;
+}
+ 
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+ 
+.search-bar input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid #3D107B;
+  font-size: 1rem;
+  background: #2a1a4b;
+  color: white;
+}
+ 
+.search-bar button {
+  padding: 12px 28px;
+  background: #EF9C00;
+  color: #1a0a3b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.search-bar button:hover { background: #EDC900; }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+ 
+.movie-card {
+  background: #2a1a4b;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.movie-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+ 
+.movie-card .no-poster {
+  width: 100%;
+  height: 240px;
+  background: #3D107B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+ 
+.movie-info {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ 
+.movie-info h3 { font-size: 0.95rem; color: #ffffff; }
+.movie-info p  { font-size: 0.8rem;  color: #aaa; }
+.movie-info button {
+  margin-top: auto;
+  padding: 8px;
+  background: #3D107B;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+.movie-info button:hover { background: #EF9C00; color: #1a0a3b; }
+ 
+.favourites { margin-top: 32px; }
+.favourites h2 { color: #EF9C00; margin-bottom: 16px; }
+ 
+.fav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #2a1a4b;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+ 
+.fav-item button {
+  background: #C0392B;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.fav-item button:hover { background: #E74C3C; }
+ 
+.no-results { color: #aaa; font-style: italic; margin: 16px 0; }
